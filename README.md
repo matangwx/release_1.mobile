@@ -1,4 +1,5 @@
 iAuth
+
 A self-authenticating mobile app
 
 Purpose
