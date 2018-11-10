@@ -51,8 +51,7 @@ render() {
         </Text>
     </View>
     );
-    }
-    else {
+    } else {
     return (<View  style={styles.container}>
         <Text style={styles.welcome}>
         Barcode Scanner
