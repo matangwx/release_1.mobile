@@ -21,5 +21,5 @@ AppRegistry.registerComponent(appName, () => QRScanner);
  * 
  * - React-Navigation lib Needed. 
  * - Camera Permission.
- * 
+ * Code Ref https://www.techiediaries.com/reactnative-android-barcode-scanner/
  */
