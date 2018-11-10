@@ -37,7 +37,7 @@ render() {
     return (
     <View style={styles.container}>
         <Text style={styles.welcome}>
-        Barcode Scanner
+        Scan QR Code
         </Text>
         <View style={styles.rectangleContainer}>
         <Camera style={styles.camera} type={this.state.cameraType} onBarCodeRead={this._handleBarCodeRead.bind(this)}>
