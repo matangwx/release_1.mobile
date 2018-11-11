@@ -7,7 +7,7 @@ Vibration,
 Dimensions
 } from 'react-native';
 
-import Camera from 'react-native-camera';
+import RNCamera from 'react-native-camera';
 
 export default class ReactBarcodeScannerProject extends Component {
 
@@ -16,7 +16,7 @@ export default class ReactBarcodeScannerProject extends Component {
         super(props, context);
         this.state = {
         scanning: true,
-        cameraType: Camera.constants.Type.back
+        cameraType: RNCamera.constants.Type.back
         };
         }
 
@@ -40,11 +40,11 @@ render() {
         Scan QR Code
         </Text>
         <View style={styles.rectangleContainer}>
-        <Camera style={styles.camera} type={this.state.cameraType} onBarCodeRead={this._handleBarCodeRead.bind(this)}>
+        <RNCamera style={styles.camera} type={this.state.cameraType} onBarCodeRead={this._handleBarCodeRead.bind(this)}>
             <View style={styles.rectangleContainer}>
             <View style={styles.rectangle}/>
             </View>            
-        </Camera>
+        </RNCamera>
         </View>
         <Text style={styles.instructions}>
         Double tap R on your keyboard to reload,{'\n'}
@@ -80,6 +80,7 @@ camera: {
     //width: Dimensions.get('window').width,
     height: 250,
     width: 250,
+
 },  
 welcome: {
     fontSize: 20,
