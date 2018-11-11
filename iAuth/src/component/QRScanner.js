@@ -76,8 +76,10 @@ camera: {
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'transparent',
-    height: Dimensions.get('window').width,
-    width: Dimensions.get('window').width,
+    //height: Dimensions.get('window').width,
+    //width: Dimensions.get('window').width,
+    height: 250,
+    width: 250,
 },  
 welcome: {
     fontSize: 20,
