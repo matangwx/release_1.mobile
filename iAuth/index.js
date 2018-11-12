@@ -5,10 +5,9 @@ import App from './App';
 import HelloWorld from './HelloWorld';
 import Props from './Props';
 import {name as appName} from './app.json';
+import QRScanner from './src/view/QRScanner';
 
-import QRScanner from './src/component/QRScanner';
-
-AppRegistry.registerComponent(appName, () => QRScanner);
+AppRegistry.registerComponent(appName, () => App);
 
 
 

@@ -11,6 +11,7 @@ import RNCamera from 'react-native-camera';
 
 export default class ReactBarcodeScannerProject extends Component {
 
+    
 
     constructor(props, context) {
         super(props, context);
@@ -21,9 +22,12 @@ export default class ReactBarcodeScannerProject extends Component {
         }
 
 _handleBarCodeRead(e) {
+    const { navigate } = this.props.navigation
     Vibration.vibrate();
-    this.setState({scanning: false});    
-    alert(e.data);
+    this.setState({scanning: false});
+    if("Inspire" == e.data){
+        navigate("CheckIn", {screen: "CheckIn"})
+    }
     return;
 }  
 getInitialState() {
