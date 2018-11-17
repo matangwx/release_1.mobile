@@ -24,9 +24,10 @@ import React from 'react';
  }
 
    render() {
+     var dateTime = this.state.data.formatted;
      return (
        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-         <Text>{this.state.data.formatted}</Text>
+         <Text>{dateTime}</Text>
        </View>
      );
    }
