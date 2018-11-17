@@ -3,10 +3,30 @@ import React from 'react';
  import { createBottomTabNavigator } from 'react-navigation';
 
  class HomeScreen extends React.Component {
+
+  state = {
+    data: ''
+ }
+ componentDidMount = () => {
+    fetch('http://api.timezonedb.com/v2.1/get-time-zone?key=9VENWSTCNAZR&format=json&by=zone&zone=Asia/Singapore', {
+       method: 'GET'
+    })
+    .then((response) => response.json())
+    .then((responseJson) => {
+       console.log(responseJson);
+       this.setState({
+          data: responseJson
+       })
+    })
+    .catch((error) => {
+       console.error(error);
+    });
+ }
+
    render() {
      return (
        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-         <Text>Home</Text>
+         <Text>{this.state.data.formatted}</Text>
        </View>
      );
    }
