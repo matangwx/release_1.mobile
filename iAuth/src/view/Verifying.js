@@ -6,9 +6,8 @@ import React from 'react';
 
  class HomeScreen extends React.Component {
 
-
    render() {
-     
+
     getDateTimeFromApi().then(function(result){
       console.log(result.split(" "));
       var timeNDate = result.split(" ");

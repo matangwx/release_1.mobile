@@ -10,11 +10,11 @@ import React from 'react';
 
 import { StackNavigator } from 'react-navigation';
 import QRScanner from './src/view/QRScanner';
-import CheckIn from './src/view/CheckIn';
+import Verifying from './src/view/Verifying';
 
 const App = StackNavigator({
   QRScanner: { screen: QRScanner},
-  CheckIn: { screen: CheckIn},
+  Verifying: { screen: Verifying},
 })
 
 export default App;
