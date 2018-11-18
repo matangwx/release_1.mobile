@@ -10,19 +10,19 @@ import React from 'react';
     super();
 
     this.state = {
-      data: ''
+      dateTime: ''
     }
   }
 
   componentDidMount(){
       getDateTimeFromApi().then(result => this.setState({
-      data: result
+        dateTime: result
     }))
   }
 
 
    render() {
-   var dateNTime = this.state.data.split(" ");
+   var dateNTime = this.state.dateTime.split(" ");
    var date = dateNTime[0];
    var time = dateNTime[1];
     return (
