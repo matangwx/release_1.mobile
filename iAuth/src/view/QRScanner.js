@@ -17,7 +17,7 @@ export default class ReactBarcodeScannerProject extends Component {
     Vibration.vibrate();
     this.setState({ scanning: false });
     if ("Inspire" == e.data) {
-      navigate("Verifying", { screen: "Verifying" });
+      navigate("CheckIn", { screen: "CheckIn" });
     }
     return;
   }
