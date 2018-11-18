@@ -7,15 +7,15 @@ import React from 'react';
   state = {
     data: ''
  }
+ 
  componentDidMount = () => {
     fetch('http://api.timezonedb.com/v2.1/get-time-zone?key=9VENWSTCNAZR&format=json&by=zone&zone=Asia/Singapore', {
        method: 'GET'
     })
     .then((response) => response.json())
     .then((responseJson) => {
-       console.log(responseJson);
        this.setState({
-          data: responseJson
+          data: responseJson.formatted.split(" ")
        })
     })
     .catch((error) => {
@@ -24,10 +24,12 @@ import React from 'react';
  }
 
    render() {
-     var dateTime = this.state.data.formatted;
+     var date = this.state.data[0];
+     var time  = this.state.data[1];
      return (
        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-         <Text>{dateTime}</Text>
+         <Text>{date}</Text>
+         <Text>{time}</Text>
        </View>
      );
    }
