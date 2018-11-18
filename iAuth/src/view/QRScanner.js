@@ -36,8 +36,8 @@ export default class ReactBarcodeScannerProject extends Component {
             <RNCamera
               style={styles.camera}
               type={this.state.cameraType}
-              onBarCodeRead={this._handleBarCodeRead.bind(this)}
-            >
+              onBarCodeRead={this._handleBarCodeRead.bind(this)}>
+              
               <View style={styles.rectangleContainer}>
                 <View style={styles.rectangle} />
               </View>

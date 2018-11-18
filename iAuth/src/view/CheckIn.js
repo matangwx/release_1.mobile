@@ -28,7 +28,7 @@ import React from 'react';
      var time  = this.state.data[1];
      return (
        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-         <Text>{date}</Text>
+          <Text>{date}</Text>
          <Text>{time}</Text>
        </View>
      );
